@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Add user</title>
+</head>
+<body>
+
+<div class="alert alert-primary text-center" role="alert">
+    <h1>Add a new user</h1>
+</div>
+
+<div class="container w-50">
+    <div class="card text-center">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+
+            <form th:action="@{/user/add}" th:object="${user}" method="post">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" th:field="*{name}">
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" aria-describedby="emailHelp" th:field="*{surname}">
+                </div>
+
+                <div class="form-group">
+                    <label for="natalNumber">Natal Number</label>
+                    <input type="text" class="form-control" id="natalNumber" aria-describedby="emailHelp"
+                           th:field="*{natalNumber}">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp" th:field="*{email}">
+                </div>
+
+                <hr>
+
+                <div>
+<!--                    <div class="form-group">-->
+<!--                        <label for="rnatalNumber">Natal Number</label>-->
+<!--                        <input type="text" class="form-control" id="rnatalNumber" aria-describedby="text"-->
+<!--                               th:field="*{permanentAddress.postcode}">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="permanentAddressPostcode">Permanent address *Postcode*</label>-->
+<!--                        <input type="text" class="form-control" id="permanentAddressPostcode" aria-describedby="emailHelp" th:field="*{permanentAddress.postcode}">-->
+<!--                    </div>-->
+
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="permanentAddressVillage">Permanent address *Village*</label>-->
+<!--                        <input type="text" class="form-control" id="permanentAddressVillage"-->
+<!--                               aria-describedby="emailHelp" th:field="*{permanentAddress.village}">-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="permanentAddressStreet">Permanent address *Street*</label>-->
+<!--                        <input type="text" class="form-control" id="permanentAddressStreet"-->
+<!--                               aria-describedby="emailHelp" th:field="*{permanentAddress.street}">-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="permanentAddressHouseNumber">Permanent address *HouseNumber*</label>-->
+<!--                        <input type="text" class="form-control" id="permanentAddressHouseNumber"-->
+<!--                               aria-describedby="emailHelp" th:field="*{permanentAddress.houseNumber}">-->
+<!--                    </div>-->
+
+                </div>
+<!--                <hr>-->
+<!--                <div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="CorrespondenceAddressPostcode">Correspondence address *Postcode*</label>-->
+<!--                        <input type="text" class="form-control" id="CorrespondenceAddressPostcode"-->
+<!--                               aria-describedby="text" th:field="*{correspondenceAddress.postcode}">-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="CorrespondenceAddressVillage">Correspondence address *Village*</label>-->
+<!--                        <input type="text" class="form-control" id="CorrespondenceAddressVillage"-->
+<!--                               aria-describedby="text" th:field="*{correspondenceAddress.village}">-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="CorrespondenceAddressStreet">Correspondence address *Street*</label>-->
+<!--                        <input type="text" class="form-control" id="CorrespondenceAddressStreet"-->
+<!--                               aria-describedby="text" th:field="*{correspondenceAddress.street}">-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="CorrespondenceAddressHouseNumber">Correspondence address *HouseNumber*</label>-->
+<!--                        <input type="text" class="form-control" id="CorrespondenceAddressHouseNumber"-->
+<!--                               aria-describedby="text" th:field="*{correspondenceAddress.houseNumber}">-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+
+        </div>
+        <div class="card-footer text-muted">
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

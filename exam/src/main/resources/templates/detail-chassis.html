@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - list</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis id</th>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis name</th>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis carrying</th>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis rotationSpeed</th>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis maxSpeed</th>
+        <th class="mdl-data-table__cell--non-numeric">TrackedChassis beltWidth</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${item.trackedChassis.id}"></td>
+    <td th:text="${item.trackedChassis.name}"></td>
+    <td th:text="${item.trackedChassis.carrying}"></td>
+    <td th:text="${item.trackedChassis.rotationSpeed}"></td>
+    <td th:text="${item.trackedChassis.maxSpeed}"></td>
+    <td th:text="${item.trackedChassis.beltWidth}"></td>
+    <td></td>
+    </tbody>
+
+</table>
+<hr>
+<a th:href="@{'/detail-tower/' + ${item.id}}">detail tower</a>
+<hr>
+<a th:href="@{'/list-vehicles'}">Veiw All</a>
+
+</body>
+</html>

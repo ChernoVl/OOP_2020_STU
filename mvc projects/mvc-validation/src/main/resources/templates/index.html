@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - Form</title>
+</head>
+<body>
+<form th:action="@{/}" th:object="${item}" method="post">
+    <label for="id">Id</label>
+    <input type="number" id="id" th:field="*{id}"/>
+    <p th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></p><br>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" th:field="*{name}"/>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p><br>
+
+    <label for="created">Creation Date</label>
+    <input type="datetime-local" id="created" th:field="*{creationDate}">
+    <p th:if="${#fields.hasErrors('creationDate')}" th:errors="*{creationDate}"></p><br>
+
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

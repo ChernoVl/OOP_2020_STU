@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - list</title>
+</head>
+<body>
+
+<p th:text="${item.towerLargeCannon.cannon}"></p>
+<hr>
+
+<a th:href="@{'/detail-tower/' + ${item.id}}">deatail chassis</a>
+<hr>
+<a th:href="@{'/list-vehicles'}">Veiw All</a>
+
+</body>
+</html>

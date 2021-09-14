@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - list</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">Tower id</th>
+        <th class="mdl-data-table__cell--non-numeric">Tower name</th>
+        <th class="mdl-data-table__cell--non-numeric">Tower rotationSpeed</th>
+        <th class="mdl-data-table__cell--non-numeric">Tower oversight</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${item.towerLargeCannon.id}"></td>
+    <td th:text="${item.towerLargeCannon.name}"></td>
+    <td th:text="${item.towerLargeCannon.rotationSpeed}"></td>
+    <td th:text="${item.towerLargeCannon.oversight}"></td>
+    </tbody>
+
+</table>
+
+<hr>
+
+<p th:text="${item.toString()}"></p>
+<hr>
+
+<a th:href="@{'/detail-chassis/' + ${item.id}}">deatail chassis</a><br>
+<a th:href="@{'/detail-cannon/' + ${item.id}}">deatail cannon</a>
+<hr>
+<a th:href="@{'/list-vehicles'}">Veiw All</a>
+
+</body>
+</html>

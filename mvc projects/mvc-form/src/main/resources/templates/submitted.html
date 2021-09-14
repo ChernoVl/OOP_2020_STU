@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - list</title>
+</head>
+<body>
+
+<p th:text="${item.checkbox}"></p><br>
+<p th:text="${item.date}"></p><br>
+<p th:text="${item.dateTime}"></p><br>
+<p th:text="${item.number}"></p><br>
+<p th:text="${item.text}"></p><br>
+
+<a class="btn btn-primary" href="/" role="button">Back</a>
+
+<form method="get" action="/">
+    <button type="submit">Back</button>
+</form>
+
+</body>
+</html>

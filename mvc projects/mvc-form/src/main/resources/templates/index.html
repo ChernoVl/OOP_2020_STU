@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC - Form</title>
+</head>
+<body>
+<!-- @{/} - означає на яку URL буде послано дата та яким способом(method="post") -->
+<!-- th:object="${item} - До якого обєкту має вкластись дані -->
+<form th:action="@{/}" th:object="${item}" method="post">
+    <label for="checkbox">checkbox</label>
+    <input type="checkbox" id="checkbox" th:field="*{checkbox}"/>
+    <br>
+
+    <label for="date">date</label>
+    <input type="date" id="date" th:field="*{date}"/>
+    <br>
+
+    <label for="dateTime">dateTime</label>
+    <input type="datetime-local" id="dateTime" th:field="*{dateTime}"/>
+    <br>
+
+    <label for="number">number</label>
+    <input type="number" id="number" th:field="*{number}"/>
+    <br>
+
+    <label for="text">text</label>
+    <input type="text" id="text" th:field="*{text}"/>
+    <br>
+
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
